@@ -25,6 +25,7 @@ public class Hibernate_operation {
     public void register_profile(String email,String password){
 
         try {
+
             if(!user_exists(email,password)){
 
                 Profile profile = new Profile(Timestamp.from(Instant.now()),Timestamp.from(Instant.now()),email,password);
@@ -45,8 +46,8 @@ public class Hibernate_operation {
             }else{
                 System.out.println("profile already exists");
             }
+
         } catch (Exception e) {
-           // throw new RuntimeException(e);
 
             Profile profile = new Profile(Timestamp.from(Instant.now()),Timestamp.from(Instant.now()),email,password);
             User user = new User(profile,profile.getEmail(),0);
@@ -142,12 +143,10 @@ public class Hibernate_operation {
     }
 
 
-
-
-
     static Session get_session(){
         Configuration configuration = new Configuration();
         SessionFactory sessionFactory=configuration.configure("hibernate.cfg.xml").buildSessionFactory();
         return sessionFactory.openSession();
     }
+
 }

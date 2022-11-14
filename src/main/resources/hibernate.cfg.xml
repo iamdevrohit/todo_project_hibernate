@@ -6,15 +6,25 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/tododb</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/mappingDemo</property>
         <property name="connection.username">root</property>
         <property name="connection.password">1234</property>
         <property name="show_sql">true</property>
         <property name="hbm2dll.auto">create</property>
 
-        <mapping class="pojo.Profile"/>
-        <mapping class="pojo.User"/>
-        <mapping class="pojo.Task"/>
+<!--        <mapping class="pojo.Profile"/>-->
+<!--        <mapping class="pojo.User"/>-->
+<!--        <mapping class="pojo.Task"/>-->
+        <mapping class="mappingDemo.onetoone.Person"/>
+        <mapping class="mappingDemo.onetoone.PersonDetail"/>
+        <mapping class="mappingDemo.onetoone.bidirectional.BiPerson"/>
+        <mapping class="mappingDemo.onetoone.bidirectional.BiPersonDetail"/>
+
+        <mapping class="mappingDemo.onetomany.College"/>
+        <mapping class="mappingDemo.onetomany.Student"/>
+
+        <mapping class="mappingDemo.manytomany.Delegate"/>
+        <mapping class="mappingDemo.manytomany.Event"/>
 
     </session-factory>
 </hibernate-configuration>

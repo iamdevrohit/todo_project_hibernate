@@ -6,19 +6,6 @@ import javax.persistence.*;
 @Table(name = "User")
 public class User {
 
-
-//         "    COUNT_TASK int NOT NULL, " +
-//
-//                 "    PROFILE_EMAIL VARCHAR(250) NOT NULL, " +
-//                 "    FOREIGN KEY (PROFILE_EMAIL)  " +
-//                 "    REFERENCES PROFILE (EMAIL), " +
-//
-//                 "    PROFILE_ID INT NOT NULL, " +
-//                 "    FOREIGN KEY (PROFILE_ID)  " +
-//                 "    REFERENCES PROFILE (ID)" +
-//                 ")";
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)

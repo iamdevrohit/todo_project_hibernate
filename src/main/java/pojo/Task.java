@@ -1,7 +1,5 @@
 package pojo;
 
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
 import java.sql.Timestamp;
 
